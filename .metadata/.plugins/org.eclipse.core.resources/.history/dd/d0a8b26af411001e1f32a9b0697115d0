@@ -20,9 +20,5 @@ public class StudentDriver {
 		StudentUtils.sortByStudent(map);
 		
 		System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++");
-		
-		StudentUtils.sortByStream(map);
-		
-		System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++");
 	}
 }

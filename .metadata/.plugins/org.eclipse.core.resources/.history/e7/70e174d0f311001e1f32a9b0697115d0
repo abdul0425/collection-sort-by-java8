@@ -64,19 +64,28 @@ public class StudentUtils {
 //	Sorting using streams API
 	static void sortByStudent(Map<Integer, Student> map) {
 		ArrayList<Entry<Integer, Student>> list = new ArrayList<>(map.entrySet());
-
-		list.stream().sorted((o1, o2) -> o2.getValue().getStdName().compareTo(o1.getValue().getStdName()))
-				.forEach(System.out::println);
-
-	}
-	
-//	Using Stream
-	static void sortByStream(Map<Integer, Student> map) {
-		map
-		.entrySet()
+		
+		list
 		.stream()
-			.sorted(Map.Entry.comparingByValue(Comparator.comparing(Student::getStdName)))
-			.forEach(System.out::println);
-	
+		.sorted((o1,o2)->o1.getValue()
+				.getStdName()
+				.compareTo(o2.getValue().getStdName()))
+		.forEach(System.out::println);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 }

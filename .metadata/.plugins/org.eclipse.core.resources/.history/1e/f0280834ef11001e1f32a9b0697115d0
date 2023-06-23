@@ -2,8 +2,15 @@ package map;
 
 public class Student {
 
+	private int stdId;
 	private String stdName;
 	private String address;
+	public int getStdId() {
+		return stdId;
+	}
+	public void setStdId(int stdId) {
+		this.stdId = stdId;
+	}
 	public String getStdName() {
 		return stdName;
 	}
@@ -16,14 +23,15 @@ public class Student {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public Student(String stdName, String address) {
+	public Student(int stdId, String stdName, String address) {
 		super();
+		this.stdId = stdId;
 		this.stdName = stdName;
 		this.address = address;
 	}
 	@Override
 	public String toString() {
-		return "Student [stdName=" + stdName + ", address=" + address + "]";
+		return "Student [stdId=" + stdId + ", stdName=" + stdName + ", address=" + address + "]";
 	}
 	
 	

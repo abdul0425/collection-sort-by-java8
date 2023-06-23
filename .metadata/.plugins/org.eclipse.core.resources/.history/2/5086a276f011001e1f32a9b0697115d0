@@ -1,0 +1,40 @@
+package map;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class StudentUtils {
+
+//	Creating Map
+	static Map<Integer, Student> getStudentMap() {
+		Map<Integer, Student> map = new HashMap<>();
+		map.put(101, new Student("Rivu", "Baruipur"));
+		map.put(201, new Student("Sasthi", "Malda"));
+		map.put(301, new Student("Madhu", "Guntoor"));
+		map.put(401, new Student("Abdul", "Barwadih"));
+		map.put(501, new Student("Kishan", "Dhanbad"));
+		map.put(601, new Student("Rishu", "Kolkata"));
+		map.put(701, new Student("Anjani", "Patna"));
+		map.put(801, new Student("Akhil", "Patna"));
+		map.put(901, new Student("Prashant", "Marchela"));
+		map.put(111, new Student("Rohan", "Gurgaon"));
+		map.put(121, new Student("Keerthana", "Bangalore"));
+
+		return map;
+	}
+
+//	Sorting using traditional way
+	static void sortByStudentName(Map<Integer, Student> map) {
+
+	}
+
+//	Sorting using lambda expression
+	static void sortByStudentName(Map<Integer, Student> map) {
+
+	}
+
+//	Sorting using streams API
+	static void sortByStudentName(Map<Integer, Student> map) {
+
+	}
+}

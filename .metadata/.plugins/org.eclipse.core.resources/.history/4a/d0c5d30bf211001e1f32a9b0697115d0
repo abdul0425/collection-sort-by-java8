@@ -1,0 +1,16 @@
+package map;
+
+import java.util.Map;
+
+public class StudentDriver {
+
+	public static void main(String[] args) {
+		Map<Integer, Student> map = StudentUtils.getStudentMap();
+		
+		// Sort by traditional way
+		StudentUtils.sortByStudentName(map);
+		
+		
+		
+	}
+}

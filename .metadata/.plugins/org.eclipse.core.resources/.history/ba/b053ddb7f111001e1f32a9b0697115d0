@@ -29,9 +29,9 @@ public class StudentUtils {
 
 //	Sorting using traditional way
 	static void sortByStudentName(Map<Integer, Student> map) {
-		ArrayList<Entry<Integer, Student>> list = new ArrayList<>(map.entrySet());
-
-		Comparator<Entry<Integer, Student>> comp = new Comparator<Map.Entry<Integer, Student>>() {
+		ArrayList<Entry<Integer,Student>> list = new ArrayList<>(map.entrySet());
+		
+		Comparator<Entry<Integer,Student>> comp = new Comparator<Map.Entry<Integer,Student>>() {
 
 			@Override
 			public int compare(Entry<Integer, Student> o1, Entry<Integer, Student> o2) {
@@ -39,44 +39,21 @@ public class StudentUtils {
 				return o1.getValue().getStdName().compareTo(o2.getValue().getStdName());
 			}
 		};
-
+		
 		Collections.sort(list, comp);
-
+		
 		for (Entry<Integer, Student> entry : list) {
-			System.out.println(entry.getKey() + "  :  " + entry.getValue());
+			System.out.println(entry.getKey()+"  :  "+entry.getValue());
 		}
 	}
 
 //	Sorting using lambda expression
 	static void sortByStudentAddress(Map<Integer, Student> map) {
-		ArrayList<Entry<Integer, Student>> list = new ArrayList<>(map.entrySet());
 
-		Comparator<Entry<Integer, Student>> comp = (o1, o2) -> o1.getValue().getAddress()
-				.compareTo(o2.getValue().getAddress());
-
-		Collections.sort(list, comp);
-
-		for (Entry<Integer, Student> entry : list) {
-			System.out.println(entry.getKey() + "  :  " + entry.getValue());
-		}
 	}
 
 //	Sorting using streams API
 	static void sortByStudent(Map<Integer, Student> map) {
-		ArrayList<Entry<Integer, Student>> list = new ArrayList<>(map.entrySet());
 
-		list.stream().sorted((o1, o2) -> o2.getValue().getStdName().compareTo(o1.getValue().getStdName()))
-				.forEach(System.out::println);
-
-	}
-	
-//	Using Stream
-	static void sortByStream(Map<Integer, Student> map) {
-		map
-		.entrySet()
-		.stream()
-			.sorted(Map.Entry.comparingByValue(Comparator.comparing(Student::getStdName)))
-			.forEach(System.out::println);
-	
 	}
 }
